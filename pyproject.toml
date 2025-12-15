@@ -1,13 +1,18 @@
 [project]
 name = "reward-hack"
 version = "0.1.0"
-description = "Add your description here"
+description = "Reproducing and extending METR’s reward hacking detection experiments."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+  "anthropic>=0.75.0",
+  "google-genai>=1.55.0",
+  "inspect-ai>=0.3.154",
+  "openai>=2.12.0",
+]
 
 [project.scripts]
-reward-hack = "reward_hack:main"
+score = "reward_hack.score:score"
 
 [build-system]
 requires = ["uv_build>=0.9.17,<0.10.0"]
